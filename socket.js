@@ -4,10 +4,12 @@ const cors = require('cors')
 const app = express()
 
 
-app.options('*', cors());
-// app.use(cors());
+// app.options('*', cors());
+app.use(cors());
 
-const io = require('socket.io')(8800,{cors: {origin: "*"}})
+
+
+const io = require('socket.io')(8800,{cors: {origin: "https://www.th.technophil.xyz"}})
 
 let activeUsers = []
 
