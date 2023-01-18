@@ -5,14 +5,7 @@ const app = express()
 
 app.use(cors());
 
-const io = require('socket.io')(8800,{
-    cors: {
-        
-        'Access-Control-Allow-Origin' : '*',
-    'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
-    }
-
-})
+const io = require('socket.io')(8800,{cors: {origin: "*"}})
 
 let activeUsers = []
 
