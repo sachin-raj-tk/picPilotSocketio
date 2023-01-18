@@ -28,7 +28,7 @@ const app = express()
 
 const io = require('socket.io')(8800,{
     cors: {
-        origin:"https://technophil.xyz/socket"
+        origin:"https://th.technophil.xyz/"
     }
 })
 
