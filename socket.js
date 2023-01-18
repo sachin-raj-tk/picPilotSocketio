@@ -5,11 +5,11 @@ const app = express()
 
 
 // app.options('*', cors());
-app.use(cors());
+app.use(cors({origin: ['https://www.th.technophil.xyz', 'http://127.0.0.1:8800']}));
 
 
 
-const io = require('socket.io')(8800,{cors: {origin: "https://www.th.technophil.xyz"}})
+const io = require('socket.io')(8800)
 
 let activeUsers = []
 
