@@ -1,6 +1,8 @@
 const io = require('socket.io')(8800,{
     cors: {
-        origin:"*"
+        
+        'Access-Control-Allow-Origin' : '*',
+    'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
     }
 
 })
