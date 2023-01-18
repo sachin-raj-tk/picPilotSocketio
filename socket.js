@@ -1,3 +1,10 @@
+import express from 'express';
+import cors from 'cors';
+
+const app = express()
+
+app.use(cors());
+
 const io = require('socket.io')(8800,{
     cors: {
         
