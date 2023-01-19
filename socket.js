@@ -26,11 +26,18 @@ const app = express()
 // });
 
 
+app.options('*', cors())
+
 const io = require('socket.io')(8800,{
     cors: {
-        origin:"https://th.technophil.xyz/"
+        origin:{origin: ['https://www.th.technophil.xyz', 'https://www.th.technophil.xyz/']}
     }
 })
+
+
+app.use(cors());
+
+console.log("socket started")
 
 let activeUsers = []
 
