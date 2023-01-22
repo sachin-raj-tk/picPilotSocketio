@@ -30,7 +30,7 @@ app.options('*', cors())
 
 const io = require('socket.io')(8800,{
     cors: {
-        origin:{origin: ['https://www.th.technophil.xyz', 'https://www.th.technophil.xyz/']}
+        origin:{origin: ['https://www.th.technophil.xyz', 'https://www.th.technophil.xyz/',"http://localhost:3000"]}
     }
 })
 
